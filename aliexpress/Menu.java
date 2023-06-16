@@ -1,15 +1,18 @@
 package aliexpress;
 
+import java.util.ArrayList;
+import java.util.Objects;
+
 public class Menu {
 	
 	//assignment 1-2
 
 
-	int menuID;
-	String menuName;
-	int parentMenuID;
-	boolean isLeaf = false;
-	String slug;
+	private int menuID;
+	private String menuName;
+	private int parentMenuID;
+	private boolean isLeaf = false;
+	private String slug;
 	public Menu(int menuID, String menuName, int parentMenuID, boolean isLeaf, String slug) {
 		super();
 		this.menuID = menuID;
@@ -18,8 +21,28 @@ public class Menu {
 		this.isLeaf = isLeaf;
 		this.slug = slug;
 	}
-
-
+	@Override
+	public String toString() {
+		return "Menu [menuName=" + menuName + "]";
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(isLeaf, menuID, menuName, parentMenuID, slug);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Menu other = (Menu) obj;
+		return isLeaf == other.isLeaf && menuID == other.menuID && Objects.equals(menuName, other.menuName)
+				&& parentMenuID == other.parentMenuID && Objects.equals(slug, other.slug);
+	}
+	
+	
 }
 
 
