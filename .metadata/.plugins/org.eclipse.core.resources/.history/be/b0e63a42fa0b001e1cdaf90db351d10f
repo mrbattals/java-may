@@ -1,0 +1,32 @@
+package aliexpress;
+
+import java.util.ArrayList;
+
+public class Menu {
+	
+	//assignment 1-2
+
+
+	private int menuID;
+	private String menuName;
+	private int parentMenuID;
+	private boolean isLeaf = false;
+	private String slug;
+	public Menu(int menuID, String menuName, int parentMenuID, boolean isLeaf, String slug) {
+		super();
+		this.menuID = menuID;
+		this.menuName = menuName;
+		this.parentMenuID = parentMenuID;
+		this.isLeaf = isLeaf;
+		this.slug = slug;
+	}
+	@Override
+	public String toString() {
+		return "Menu [menuID=" + menuID + ", menuName=" + menuName + ", parentMenuID=" + parentMenuID + ", isLeaf="
+				+ isLeaf + ", slug=" + slug + "]";
+	}
+	
+
+}
+
+

@@ -1,0 +1,13 @@
+package aliexpress;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MenuList {
+	
+
+	List<Menu> menuItems = new ArrayList<>();
+
+	menuItems.add(new Menu(1,"WOMEN FASHION",0,false,"women-fashion"));
+
+}
